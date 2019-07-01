@@ -5,8 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
-static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
+/* static char *font = "mono:pixelsize=16:antialias=true:autohint=true"; */
+static char *font = "Iosevka:pixelsize=16:antialias=true:autohint=true"; 
+
+/* static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" }; */
+static char *font2[] = { "Iosevka:pixelsize=16:antialias=true:autohint=true" }; 
 static int borderpx = 2;
 
 /*
@@ -340,11 +343,12 @@ static Key key[] = {
 	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[4h",      -1,    0},
 	{ XK_KP_Insert,     XK_ANY_MOD,     "\033[2~",      +1,    0},
 	{ XK_KP_Delete,     ControlMask,    "\033[M",       -1,    0},
+	{ XK_KP_Delete,     ControlMask,    "\033[2J",       -1,    0},
 	{ XK_KP_Delete,     ControlMask,    "\033[3;5~",    +1,    0},
 	{ XK_KP_Delete,     ShiftMask,      "\033[2K",      -1,    0},
-	{ XK_KP_Delete,     ShiftMask,      "\033[3;2~",    +1,    0},
+	{ XK_KP_Delete,     ControlMask,    "\033[3;2~",    +1,    0},
 	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[P",       -1,    0},
-	{ XK_KP_Delete,     XK_ANY_MOD,     "\033[3~",      +1,    0},
+	{ XK_KP_Delete,     XK_ANY_MOD,    "\033[3~",    +1,    0},
 	{ XK_KP_Multiply,   XK_ANY_MOD,     "\033Oj",       +2,    0},
 	{ XK_KP_Add,        XK_ANY_MOD,     "\033Ok",       +2,    0},
 	{ XK_KP_Enter,      XK_ANY_MOD,     "\033OM",       +2,    0},
